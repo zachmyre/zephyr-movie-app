@@ -1,0 +1,24 @@
+<div class="container" *ngIf="movies.length > 3; else elseBlock">
+  <div class="card" *ngFor="let movie of movies | slice: 1; let i = index">
+    <li
+      class="card"
+      *ngIf="
+        movie != 'editorLastConnected' && movie != 'editorHasEmittedBundle'
+      "
+    >
+      <h6>{{ movie }}</h6>
+      <button class="btn btn-primary" (click)="removeItem(movie)">
+        Remove Favorite
+      </button>
+      <img src="https://image.tmdb.org/t/p/original{{ posters[i + 1] }}" />
+    </li>
+  </div>
+</div>
+
+<ng-template #elseBlock>
+  <div class="container">
+    <div class="elseBlock">
+      <h4>You do not currently have any favorites.</h4>
+    </div>
+  </div>
+</ng-template>

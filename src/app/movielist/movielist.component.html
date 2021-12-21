@@ -1,0 +1,50 @@
+<div class="container searchbar">
+  <div class="input-group">
+    <div class="form-outline">
+      <input
+        type="search"
+        id="form1"
+        class="form-control"
+        [(ngModel)]="search"
+      />
+      <button
+        type="button"
+        class="btn btn-primary"
+        (click)="searchMovies(search)"
+      >
+        Search
+      </button>
+    </div>
+  </div>
+  <div class="card" *ngFor="let movie of movies">
+    <button
+      type="button"
+      class="btn btn-primary localStorage"
+      (click)="addToLocalStorage(movie['title'], movie['poster_path'])"
+    >
+      Add to Favorites
+    </button>
+    <img
+      (click)="updateOverview()"
+      class="card-img-top"
+      src="https://image.tmdb.org/t/p/original{{ movie['poster_path'] }}"
+      alt="{{ movie['title'] }}"
+    />
+    <span class="ratings badge bg-warning text-dark">{{
+      movie['vote_average']
+    }}</span>
+    <h3>{{ movie['title'] }}</h3>
+    <div class="overview" *ngIf="overview">
+      <h5>
+        Overview:
+        <span class="badge bg-warning text-dark">{{
+          movie['vote_average']
+        }}</span>
+      </h5>
+
+      <p>
+        {{ movie['overview'] }}
+      </p>
+    </div>
+  </div>
+</div>

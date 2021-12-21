@@ -1,0 +1,115 @@
+.container {
+  width: 100vw !important;
+  height: 100vh !important;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  background-color: rgb(6, 47, 75);
+  align-items: center !important;
+}
+
+.card {
+  margin: 7.5% !important;
+  margin-top: 11.5% !important;
+  background-color: white !important;
+  border: 0 !important;
+  text-align: center !important;
+  white-space: initial;
+  display: inline-flex;
+  padding: unset !important;
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 13px 27px -5px,
+    rgba(255, 255, 255, 0.3) 0px 8px 16px -8px !important;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.overview {
+  border-radius: 10px !important;
+  white-space: initial;
+  background-color: white;
+  position: absolute;
+  animation: 0.25s ease-in 0s 1 slideUp;
+  padding: 1rem !important;
+}
+
+.card img {
+  border-radius: 0 !important;
+  object-fit: cover !important;
+}
+
+.ratings {
+  padding: 1% !important;
+  width: 100%;
+  height: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold !important;
+}
+
+h3 {
+  margin: 3% 0 !important;
+  object-fit: cover !important;
+  font-size: 1rem !important;
+  background-color: white !important;
+  width: 100%;
+}
+
+h5 {
+  margin-bottom: 5% !important;
+}
+
+h5 span {
+  display: inline-block !important;
+  width: 20% !important;
+}
+
+.input-group {
+  position: fixed !important;
+  width: 100%;
+  height: 6%;
+  background-color: rgb(6, 47, 75) !important;
+}
+
+.form-outline {
+  margin: 0 2.5% !important;
+  text-align: center !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.btn {
+  text-align: center !important;
+  margin: 0 2.5% !important;
+  font-weight: bold !important;
+  width: 20% !important;
+  height: 65% !important;
+}
+
+.form-control {
+  width: 75% !important;
+  height: 65% !important;
+}
+
+.localStorage {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  border-top-left-radius: 3px !important;
+  border-top-right-radius: 3px !important;
+}
+
+.searchbar {
+  height: 10% !important;
+}
